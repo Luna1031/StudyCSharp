@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.TxtUserId = new MetroFramework.Controls.MetroTextBox();
@@ -60,7 +61,7 @@
             // 
             // 
             this.TxtUserId.CustomButton.Image = null;
-            this.TxtUserId.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.TxtUserId.CustomButton.Location = new System.Drawing.Point(178, 1);
             this.TxtUserId.CustomButton.Name = "";
             this.TxtUserId.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtUserId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -91,7 +92,7 @@
             // 
             // 
             this.TxtPassword.CustomButton.Image = null;
-            this.TxtPassword.CustomButton.Location = new System.Drawing.Point(241, 1);
+            this.TxtPassword.CustomButton.Location = new System.Drawing.Point(178, 1);
             this.TxtPassword.CustomButton.Name = "";
             this.TxtPassword.CustomButton.Size = new System.Drawing.Size(21, 21);
             this.TxtPassword.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -152,6 +153,7 @@
             this.Controls.Add(this.TxtUserId);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginForm";

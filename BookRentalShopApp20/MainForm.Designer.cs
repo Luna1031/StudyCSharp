@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuMng = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuItemCodeMng = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MnuItemExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuItemBooksMng = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +53,7 @@
             // 
             this.MnuMng.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuItemCodeMng,
+            this.MnuItemBooksMng,
             this.toolStripMenuItem1,
             this.MnuItemExit});
             this.MnuMng.Name = "MnuMng";
@@ -77,12 +80,21 @@
             this.MnuItemExit.Text = "끝내기(&X)";
             this.MnuItemExit.Click += new System.EventHandler(this.MnuItemExit_Click);
             // 
+            // MnuItemBooksMng
+            // 
+            this.MnuItemBooksMng.Name = "MnuItemBooksMng";
+            this.MnuItemBooksMng.Size = new System.Drawing.Size(180, 22);
+            this.MnuItemBooksMng.Text = "도서관리(&B)";
+            this.MnuItemBooksMng.Click += new System.EventHandler(this.MnuItemBooksMng_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(600, 400);
@@ -107,6 +119,7 @@
         private System.Windows.Forms.ToolStripMenuItem MnuItemCodeMng;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem MnuItemExit;
+        private System.Windows.Forms.ToolStripMenuItem MnuItemBooksMng;
     }
 }
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using System.Xml;
 using System.Net;
+using System.Web;
 
 namespace MyMovieApp.SubItems
 {
@@ -38,7 +39,7 @@ namespace MyMovieApp.SubItems
             StringBuilder str = new StringBuilder();
             str.Append("http://www.kobis.or.kr/kobisopenapi/webservice/rest/movie/searchMovieList.xml");     // OpenAPI 기본 
             str.Append("?key=c71886bea109143f47d70cdb9dd40d69");   // 최초의 파라미터값은 '?', 다음부터는 '&'
-            str.Append($"&movieNm={TxtSearchItem.Text}");          // 검색어
+            str.Append($"&movieNm={HttpUtility.UrlEncode(TxtSearchItem.Text)}");          // 검색어
             str.Append("&itemPerPage=10");                         // 읽어 올 데이터 수
             str.Append("&curPage=1");                              // 페이지 번호
 
@@ -64,9 +65,11 @@ namespace MyMovieApp.SubItems
                                             item["prdtStatNm"] == null ? string.Empty : item["prdtStatNm"].InnerText,   // 제작상태
                                             item["nationAlt"] == null ? string.Empty : item["nationAlt"].InnerText,     // 제작국가
                                             item["genreAlt"] == null ? string.Empty : item["genreAlt"].InnerText,       // 영화장르
-                                            item["peopleNm"] == null ? string.Empty : item["peopleNm"].InnerText,       // 영화감독명
-                                            item["companyCd"] == null ? string.Empty : item["companyCd"].InnerText,     // 제작사코드
-                                            item["companyNm"] == null ? string.Empty : item["companyNm"].InnerText      // 제작사명
+                                            item["directors"] == null ? string.Empty : item["directors"].InnerText,     // 영화감독
+                                            item["companys"] == null ? string.Empty : item["companys"].InnerText        // 영화제작사
+                                            //item["directors"] == null ? string.Empty : item["directors"].InnerText,   // 영화감독명
+                                            //item["companyCd"] == null ? string.Empty : item["companyCd"].InnerText,   // 제작사코드
+                                            //item["companys"] == null ? string.Empty : item["companys"].InnerText      // 제작사명
                                             );
                 }
             }
@@ -84,6 +87,17 @@ namespace MyMovieApp.SubItems
             {
                 BtnSearch_Click(sender, new EventArgs());
             }
+        }
+
+        private void MtlBack_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+
+            MainForm main = new MainForm();
+            main.Location = this.Location;
+            main.ShowDialog();
+
+            this.Close();
         }
     }
 }

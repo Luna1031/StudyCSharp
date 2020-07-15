@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kissclipart-english-school-icon-png-clipart-computer-icons-sch-cf4d7ab673a91a85.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -103,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commons.cs" />
+    <Compile Include="Items\BooksMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Items\BooksMngForm.Designer.cs">
+      <DependentUpon>BooksMngForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Items\DivMngForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +136,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Items\BooksMngForm.resx">
+      <DependentUpon>BooksMngForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Items\DivMngForm.resx">
       <DependentUpon>DivMngForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +170,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kissclipart-english-school-icon-png-clipart-computer-icons-sch-cf4d7ab673a91a85.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

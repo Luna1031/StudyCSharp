@@ -33,6 +33,7 @@
             this.BtnSearch = new MetroFramework.Controls.MetroButton();
             this.TxtSearchItem = new MetroFramework.Controls.MetroTextBox();
             this.DgvSearchItems = new System.Windows.Forms.DataGridView();
+            this.MtlBack = new MetroFramework.Controls.MetroTile();
             this.movieCd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movieNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.movieNmEn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +43,8 @@
             this.prdtStatNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nationAlt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.genreAlt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.peopleNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyCd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.companyNm = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.directors = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.companys = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -129,9 +128,8 @@
             this.prdtStatNm,
             this.nationAlt,
             this.genreAlt,
-            this.peopleNm,
-            this.companyCd,
-            this.companyNm});
+            this.directors,
+            this.companys});
             this.DgvSearchItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvSearchItems.Location = new System.Drawing.Point(0, 0);
             this.DgvSearchItems.Name = "DgvSearchItems";
@@ -140,6 +138,20 @@
             this.DgvSearchItems.RowTemplate.Height = 23;
             this.DgvSearchItems.Size = new System.Drawing.Size(1240, 634);
             this.DgvSearchItems.TabIndex = 0;
+            // 
+            // MtlBack
+            // 
+            this.MtlBack.ActiveControl = null;
+            this.MtlBack.Location = new System.Drawing.Point(132, 18);
+            this.MtlBack.Name = "MtlBack";
+            this.MtlBack.Size = new System.Drawing.Size(38, 36);
+            this.MtlBack.Style = MetroFramework.MetroColorStyle.Silver;
+            this.MtlBack.TabIndex = 1;
+            this.MtlBack.TileImage = ((System.Drawing.Image)(resources.GetObject("MtlBack.TileImage")));
+            this.MtlBack.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MtlBack.UseSelectable = true;
+            this.MtlBack.UseTileImage = true;
+            this.MtlBack.Click += new System.EventHandler(this.MtlBack_Click);
             // 
             // movieCd
             // 
@@ -195,43 +207,24 @@
             this.genreAlt.Name = "genreAlt";
             this.genreAlt.ReadOnly = true;
             // 
-            // peopleNm
+            // directors
             // 
-            this.peopleNm.HeaderText = "영화감독명";
-            this.peopleNm.Name = "peopleNm";
-            this.peopleNm.ReadOnly = true;
+            this.directors.HeaderText = "영화감독";
+            this.directors.Name = "directors";
+            this.directors.ReadOnly = true;
             // 
-            // companyCd
+            // companys
             // 
-            this.companyCd.HeaderText = "제작사코드";
-            this.companyCd.Name = "companyCd";
-            this.companyCd.ReadOnly = true;
-            // 
-            // companyNm
-            // 
-            this.companyNm.HeaderText = "제작사명";
-            this.companyNm.Name = "companyNm";
-            this.companyNm.ReadOnly = true;
-            // 
-            // metroTile2
-            // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(1222, 18);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(38, 36);
-            this.metroTile2.Style = MetroFramework.MetroColorStyle.Silver;
-            this.metroTile2.TabIndex = 1;
-            this.metroTile2.TileImage = ((System.Drawing.Image)(resources.GetObject("metroTile2.TileImage")));
-            this.metroTile2.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseTileImage = true;
+            this.companys.HeaderText = "영화제작사";
+            this.companys.Name = "companys";
+            this.companys.ReadOnly = true;
             // 
             // TitleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 774);
-            this.Controls.Add(this.metroTile2);
+            this.Controls.Add(this.MtlBack);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TitleForm";
@@ -255,6 +248,7 @@
         private System.Windows.Forms.DataGridView DgvSearchItems;
         private MetroFramework.Controls.MetroButton BtnSearch;
         private MetroFramework.Controls.MetroTextBox TxtSearchItem;
+        private MetroFramework.Controls.MetroTile MtlBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn movieCd;
         private System.Windows.Forms.DataGridViewTextBoxColumn movieNm;
         private System.Windows.Forms.DataGridViewTextBoxColumn movieNmEn;
@@ -264,9 +258,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn prdtStatNm;
         private System.Windows.Forms.DataGridViewTextBoxColumn nationAlt;
         private System.Windows.Forms.DataGridViewTextBoxColumn genreAlt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn peopleNm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyCd;
-        private System.Windows.Forms.DataGridViewTextBoxColumn companyNm;
-        private MetroFramework.Controls.MetroTile metroTile2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn directors;
+        private System.Windows.Forms.DataGridViewTextBoxColumn companys;
     }
 }
