@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MtlStockAnals = new MetroFramework.Controls.MetroTile();
-            this.MltInvestSimul = new MetroFramework.Controls.MetroTile();
+            this.MtlInvestSimul = new MetroFramework.Controls.MetroTile();
             this.MtlSearchItem = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
@@ -46,17 +46,17 @@
             this.MtlStockAnals.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MtlStockAnals.UseTileImage = true;
             // 
-            // MltInvestSimul
+            // MtlInvestSimul
             // 
-            this.MltInvestSimul.Location = new System.Drawing.Point(329, 219);
-            this.MltInvestSimul.Name = "MltInvestSimul";
-            this.MltInvestSimul.Size = new System.Drawing.Size(300, 150);
-            this.MltInvestSimul.Style = MetroFramework.MetroColorStyle.Lime;
-            this.MltInvestSimul.TabIndex = 0;
-            this.MltInvestSimul.Text = "투자시뮬레이션";
-            this.MltInvestSimul.TileImage = global::MyStockSystem.Properties.Resources.simulator2;
-            this.MltInvestSimul.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.MltInvestSimul.UseTileImage = true;
+            this.MtlInvestSimul.Location = new System.Drawing.Point(329, 219);
+            this.MtlInvestSimul.Name = "MtlInvestSimul";
+            this.MtlInvestSimul.Size = new System.Drawing.Size(300, 150);
+            this.MtlInvestSimul.Style = MetroFramework.MetroColorStyle.Lime;
+            this.MtlInvestSimul.TabIndex = 0;
+            this.MtlInvestSimul.Text = "투자시뮬레이션";
+            this.MtlInvestSimul.TileImage = global::MyStockSystem.Properties.Resources.simulator2;
+            this.MtlInvestSimul.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MtlInvestSimul.UseTileImage = true;
             // 
             // MtlSearchItem
             // 
@@ -77,7 +77,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.MtlStockAnals);
-            this.Controls.Add(this.MltInvestSimul);
+            this.Controls.Add(this.MtlInvestSimul);
             this.Controls.Add(this.MtlSearchItem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -96,7 +96,7 @@
 
         private MetroFramework.Controls.MetroTile MtlSearchItem;
         private MetroFramework.Controls.MetroTile MtlStockAnals;
-        private MetroFramework.Controls.MetroTile MltInvestSimul;
+        private MetroFramework.Controls.MetroTile MtlInvestSimul;
     }
 }
 

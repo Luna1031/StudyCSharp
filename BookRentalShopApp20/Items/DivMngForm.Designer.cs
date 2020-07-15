@@ -69,6 +69,8 @@
             // 
             // GrdDivTbl
             // 
+            this.GrdDivTbl.AllowUserToAddRows = false;
+            this.GrdDivTbl.AllowUserToDeleteRows = false;
             this.GrdDivTbl.AllowUserToResizeRows = false;
             this.GrdDivTbl.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.GrdDivTbl.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -97,6 +99,7 @@
             this.GrdDivTbl.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.GrdDivTbl.Location = new System.Drawing.Point(0, 0);
             this.GrdDivTbl.Name = "GrdDivTbl";
+            this.GrdDivTbl.ReadOnly = true;
             this.GrdDivTbl.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(119)))), ((int)(((byte)(53)))));
@@ -112,6 +115,7 @@
             this.GrdDivTbl.Size = new System.Drawing.Size(390, 370);
             this.GrdDivTbl.Style = MetroFramework.MetroColorStyle.Orange;
             this.GrdDivTbl.TabIndex = 0;
+            this.GrdDivTbl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GrdDivTbl_CellClick);
             // 
             // groupBox1
             // 
@@ -137,7 +141,7 @@
             this.BtnCancel.Location = new System.Drawing.Point(259, 104);
             this.BtnCancel.Name = "BtnCancel";
             this.BtnCancel.Size = new System.Drawing.Size(75, 53);
-            this.BtnCancel.TabIndex = 2;
+            this.BtnCancel.TabIndex = 5;
             this.BtnCancel.Text = "취소";
             this.BtnCancel.UseSelectable = true;
             this.BtnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -157,7 +161,7 @@
             this.BtnNew.Location = new System.Drawing.Point(97, 104);
             this.BtnNew.Name = "BtnNew";
             this.BtnNew.Size = new System.Drawing.Size(75, 53);
-            this.BtnNew.TabIndex = 2;
+            this.BtnNew.TabIndex = 3;
             this.BtnNew.Text = "신규";
             this.BtnNew.UseSelectable = true;
             this.BtnNew.Click += new System.EventHandler(this.BtnNew_Click);
@@ -167,7 +171,7 @@
             this.BtnSave.Location = new System.Drawing.Point(178, 104);
             this.BtnSave.Name = "BtnSave";
             this.BtnSave.Size = new System.Drawing.Size(75, 53);
-            this.BtnSave.TabIndex = 2;
+            this.BtnSave.TabIndex = 4;
             this.BtnSave.Text = "저장";
             this.BtnSave.UseSelectable = true;
             this.BtnSave.Click += new System.EventHandler(this.BtnSave_Click);
@@ -227,7 +231,7 @@
             this.TxtDivision.SelectionStart = 0;
             this.TxtDivision.ShortcutsEnabled = true;
             this.TxtDivision.Size = new System.Drawing.Size(186, 23);
-            this.TxtDivision.TabIndex = 1;
+            this.TxtDivision.TabIndex = 0;
             this.TxtDivision.UseSelectable = true;
             this.TxtDivision.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TxtDivision.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
