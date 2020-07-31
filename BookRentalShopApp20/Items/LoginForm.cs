@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
@@ -51,7 +52,10 @@ namespace BookRentalShopApp20.Items
                     MySqlParameter paramUserId = new MySqlParameter("@userID", MySqlDbType.VarChar, 12);
                     paramUserId.Value = TxtUserId.Text.Trim();
                     MySqlParameter paramPassword = new MySqlParameter("@password", MySqlDbType.VarChar);
-                    paramPassword.Value = TxtPassword.Text.Trim();
+                    var md5Hash = MD5.Create();
+                    var cryptoPassword = Commons.GetMd5Hash(md5Hash, TxtPassword.Text.Trim());
+                    paramPassword.Value = cryptoPassword;
+                    // 원래 암호화되지않은 코드 :paramPassword.Value = TxtPassword.Text.Trim();
 
                     cmd.Parameters.Add(paramUserId);
                     cmd.Parameters.Add(paramPassword);
@@ -69,6 +73,7 @@ namespace BookRentalShopApp20.Items
                     else
                     {
                         resultId = reader["userID"] != null ? reader["userID"].ToString() : string.Empty;
+                        Commons.USERID = resultId;
                         MetroMessageBox.Show(this, $"{resultId} 로그인성공");
                     }
                 }

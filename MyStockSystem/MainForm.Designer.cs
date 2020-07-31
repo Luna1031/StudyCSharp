@@ -32,6 +32,7 @@
             this.MtlStockAnals = new MetroFramework.Controls.MetroTile();
             this.MtlInvestSimul = new MetroFramework.Controls.MetroTile();
             this.MtlSearchItem = new MetroFramework.Controls.MetroTile();
+            this.MtlGalmetGuide = new MetroFramework.Controls.MetroTile();
             this.SuspendLayout();
             // 
             // MtlStockAnals
@@ -71,6 +72,19 @@
             this.MtlSearchItem.UseTileImage = true;
             this.MtlSearchItem.Click += new System.EventHandler(this.MtlSearchItem_Click);
             // 
+            // MtlGalmetGuide
+            // 
+            this.MtlGalmetGuide.Location = new System.Drawing.Point(485, 63);
+            this.MtlGalmetGuide.Name = "MtlGalmetGuide";
+            this.MtlGalmetGuide.Size = new System.Drawing.Size(300, 150);
+            this.MtlGalmetGuide.Style = MetroFramework.MetroColorStyle.Teal;
+            this.MtlGalmetGuide.TabIndex = 0;
+            this.MtlGalmetGuide.Text = "갈맷길정보";
+            this.MtlGalmetGuide.TileImage = global::MyStockSystem.Properties.Resources.marketing2;
+            this.MtlGalmetGuide.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MtlGalmetGuide.UseTileImage = true;
+            this.MtlGalmetGuide.Click += new System.EventHandler(this.MtlGalmetGuide_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -78,6 +92,7 @@
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.MtlStockAnals);
             this.Controls.Add(this.MtlInvestSimul);
+            this.Controls.Add(this.MtlGalmetGuide);
             this.Controls.Add(this.MtlSearchItem);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -97,6 +112,7 @@
         private MetroFramework.Controls.MetroTile MtlSearchItem;
         private MetroFramework.Controls.MetroTile MtlStockAnals;
         private MetroFramework.Controls.MetroTile MtlInvestSimul;
+        private MetroFramework.Controls.MetroTile MtlGalmetGuide;
     }
 }
 

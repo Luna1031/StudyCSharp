@@ -60,7 +60,6 @@
             this.MtlBack.TileImage = global::MyStockSystem.Properties.Resources.back2;
             this.MtlBack.TileImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.MtlBack.UseTileImage = true;
-            this.MtlBack.Click += new System.EventHandler(this.MtlBack_Click);
             // 
             // metroTabControl1
             // 
@@ -111,7 +110,6 @@
             this.TxtSearchItem.Size = new System.Drawing.Size(230, 35);
             this.TxtSearchItem.TabIndex = 1;
             this.TxtSearchItem.Click += new System.EventHandler(this.metroTextBox1_Click);
-            this.TxtSearchItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtSearchItem_KeyPress);
             // 
             // BtnSearch
             // 
@@ -140,7 +138,6 @@
             this.DgvSearchItems.RowTemplate.Height = 23;
             this.DgvSearchItems.Size = new System.Drawing.Size(1223, 467);
             this.DgvSearchItems.TabIndex = 0;
-            this.DgvSearchItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ISIN
             // 
@@ -199,7 +196,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "주식정보검색";
-            this.Load += new System.EventHandler(this.SerachItemForm_Load);
             this.metroTabControl1.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);

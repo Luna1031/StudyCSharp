@@ -32,9 +32,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.MnuMng = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuItemCodeMng = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuItemBooksMng = new System.Windows.Forms.ToolStripMenuItem();
+            this.MulItemMemberMng = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuItemRentalMng = new System.Windows.Forms.ToolStripMenuItem();
+            this.MnuItemUserMng = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.MnuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.MnuItemBooksMng = new System.Windows.Forms.ToolStripMenuItem();
+            this.LbnUserID = new MetroFramework.Controls.MetroLabel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +58,9 @@
             this.MnuMng.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MnuItemCodeMng,
             this.MnuItemBooksMng,
+            this.MulItemMemberMng,
+            this.MnuItemRentalMng,
+            this.MnuItemUserMng,
             this.toolStripMenuItem1,
             this.MnuItemExit});
             this.MnuMng.Name = "MnuMng";
@@ -63,35 +70,64 @@
             // MnuItemCodeMng
             // 
             this.MnuItemCodeMng.Name = "MnuItemCodeMng";
-            this.MnuItemCodeMng.Size = new System.Drawing.Size(180, 22);
+            this.MnuItemCodeMng.Size = new System.Drawing.Size(168, 22);
             this.MnuItemCodeMng.Text = "코드관리(&C)";
             this.MnuItemCodeMng.Click += new System.EventHandler(this.MnuItemCodeMng_Click);
+            // 
+            // MnuItemBooksMng
+            // 
+            this.MnuItemBooksMng.Name = "MnuItemBooksMng";
+            this.MnuItemBooksMng.Size = new System.Drawing.Size(168, 22);
+            this.MnuItemBooksMng.Text = "도서관리(&B)";
+            this.MnuItemBooksMng.Click += new System.EventHandler(this.MnuItemBooksMng_Click);
+            // 
+            // MulItemMemberMng
+            // 
+            this.MulItemMemberMng.Name = "MulItemMemberMng";
+            this.MulItemMemberMng.Size = new System.Drawing.Size(168, 22);
+            this.MulItemMemberMng.Text = "회원관리(&M)";
+            this.MulItemMemberMng.Click += new System.EventHandler(this.MulItemMemberMng_Click);
+            // 
+            // MnuItemRentalMng
+            // 
+            this.MnuItemRentalMng.Name = "MnuItemRentalMng";
+            this.MnuItemRentalMng.Size = new System.Drawing.Size(168, 22);
+            this.MnuItemRentalMng.Text = "대여관리(&R)";
+            this.MnuItemRentalMng.Click += new System.EventHandler(this.MnuItemRentalMng_Click);
+            // 
+            // MnuItemUserMng
+            // 
+            this.MnuItemUserMng.Name = "MnuItemUserMng";
+            this.MnuItemUserMng.Size = new System.Drawing.Size(168, 22);
+            this.MnuItemUserMng.Text = "사용자관리(&U)";
+            this.MnuItemUserMng.Click += new System.EventHandler(this.MnuItemUserMng_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(165, 6);
             // 
             // MnuItemExit
             // 
             this.MnuItemExit.Name = "MnuItemExit";
             this.MnuItemExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MnuItemExit.Size = new System.Drawing.Size(180, 22);
+            this.MnuItemExit.Size = new System.Drawing.Size(168, 22);
             this.MnuItemExit.Text = "끝내기(&X)";
             this.MnuItemExit.Click += new System.EventHandler(this.MnuItemExit_Click);
             // 
-            // MnuItemBooksMng
+            // LbnUserID
             // 
-            this.MnuItemBooksMng.Name = "MnuItemBooksMng";
-            this.MnuItemBooksMng.Size = new System.Drawing.Size(180, 22);
-            this.MnuItemBooksMng.Text = "도서관리(&B)";
-            this.MnuItemBooksMng.Click += new System.EventHandler(this.MnuItemBooksMng_Click);
+            this.LbnUserID.Location = new System.Drawing.Point(594, 26);
+            this.LbnUserID.Name = "LbnUserID";
+            this.LbnUserID.Size = new System.Drawing.Size(186, 23);
+            this.LbnUserID.TabIndex = 3;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.LbnUserID);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.On;
@@ -100,7 +136,7 @@
             this.MinimumSize = new System.Drawing.Size(600, 400);
             this.Name = "MainForm";
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Book Rental Shop v0.6";
+            this.Text = "Book Rental Shop v0.8";
             this.TransparencyKey = System.Drawing.Color.Empty;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
@@ -120,6 +156,10 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem MnuItemExit;
         private System.Windows.Forms.ToolStripMenuItem MnuItemBooksMng;
+        private System.Windows.Forms.ToolStripMenuItem MulItemMemberMng;
+        private System.Windows.Forms.ToolStripMenuItem MnuItemRentalMng;
+        private System.Windows.Forms.ToolStripMenuItem MnuItemUserMng;
+        private MetroFramework.Controls.MetroLabel LbnUserID;
     }
 }
 

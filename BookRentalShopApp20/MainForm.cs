@@ -19,6 +19,8 @@ namespace BookRentalShopApp20
         {
             LoginForm login = new LoginForm();
             login.ShowDialog();
+
+            LbnUserID.Text = $"LOGIN : {Commons.USERID}";
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -43,15 +45,27 @@ namespace BookRentalShopApp20
             ShowFormControl(form, "코드 관리");
         }
 
-        private void MnuItemExit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
         private void MnuItemBooksMng_Click(object sender, EventArgs e)
         {
             BooksMngForm form = new BooksMngForm();
             ShowFormControl(form, "도서 관리");
+        }
+
+        private void MulItemMemberMng_Click(object sender, EventArgs e)
+        {
+            MemberMngForm form = new MemberMngForm();
+            ShowFormControl(form, "회원 관리");
+        }
+
+        private void MnuItemRentalMng_Click(object sender, EventArgs e)
+        {
+            RentalMngForm form = new RentalMngForm();
+            ShowFormControl(form, "대여 관리");
+        }
+
+        private void MnuItemUserMng_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void ShowFormControl(Form form, string title)
@@ -61,6 +75,11 @@ namespace BookRentalShopApp20
             form.Dock = DockStyle.Fill;
             form.Show();
             form.WindowState = FormWindowState.Maximized;
+        }
+
+        private void MnuItemExit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }
